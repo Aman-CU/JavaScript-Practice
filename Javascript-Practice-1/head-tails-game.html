@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Head & Tails</title>
+  </head>
+  <body>
+    <p>Head & Tails Game</p>
+    <button
+      onclick="
+    let randomNumber = Math.random();
+    let result = '';
+    
+    result = randomNumber < 0.5 ? 'Heads' : 'Tails';
+    // if(randomNumber < 0.5){
+    //     result = 'Heads';
+    // }else{
+    //     result = 'Tails';
+    // }
+
+    console.log(result === 'Heads' ? 'You Win' : 'You lose')
+    // if(result === 'Heads'){
+    //     console.log('You win');
+    // }else {
+    //     console.log('You lose');
+    // }
+    "
+    >
+      Head
+    </button>
+    <button
+      onclick="
+     randomNumber = Math.random();
+     result = '';
+    
+    if(randomNumber > 0.5){
+        result = 'Tails';
+    }else{
+        result = 'Heads';
+    }
+    if(result === 'Tails'){
+        console.log('You win');
+    }else {
+        console.log('You lose');
+    }
+    "
+    >
+      Tails
+    </button>
+  </body>
+</html>
