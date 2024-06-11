@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <button>Hello</button>
+    <button class="js-button">Second Button</button>
+    <script>
+      //DOM Mehtods
+      console.log(document.querySelector("button"));
+
+      //we can get inside any HTML elements
+      console.log(document.querySelector("button").innerHTML);
+
+      //we can get inside any HTML elements using querySelector and change the innerHTML
+      document.querySelector("button").innerHTML = "Changed";
+
+      //when we have 2 or more same HTML elements then we can select it using class
+      console.log(document.querySelector(".js-button"));
+
+      //we can also use variable to store object
+      const buttonElement = document.querySelector(".js-button");
+      console.log(buttonElement);
+
+      /*  
+      console.log(document.title);
+      document.title = "Changed";
+
+      console.log(document.body);
+      console.log(typeof document.body);
+
+      console.log(document.body.innerHTML);
+      document.body.innerHTML = "<button>Good Job!</button>";
+
+      */
+
+      /*  
+      document.body.innerHTML = "hello";
+      document.title = "Good Job!";
+      */
+    </script>
+  </body>
+</html>
