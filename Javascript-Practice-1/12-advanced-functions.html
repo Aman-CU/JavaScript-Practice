@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Functions</title>
+  </head>
+  <body>
+    <script>
+      /*
+      //functions are also value
+      const function1 = function greeting() {
+        console.log("hello");
+      };
+
+      console.log(function1);
+      //we can call as well
+      function1();
+
+      const object1 = {
+        num: 2,
+        //also called anonymus function
+        fun: function () {
+          console.log("hello");
+        },
+      };
+
+      object1.fun();
+
+      function display(param) {
+        console.log(param);
+      }
+      display(3);
+
+      function run(program) {
+        param();
+      }
+
+      //passing a fun into a fuction
+      //function is passing in called a callback function
+      run(function () {
+        console.log("hello4");
+      });
+      */
+
+      /*
+      //run the function in future
+      setTimeout(function () {
+        console.log("timout");
+      }, 3000);
+
+      console.log("next line");
+
+      setInterval(function () {
+        console.log("interval");
+      }, 3000);
+
+      console.log("nextline 2");
+
+      */
+
+      ["make dinner", "wash dishes", "watch youtube"].forEach(function (
+        value,
+        index
+      ) {
+        if (value === "wash dishes") {
+          return;
+        }
+        console.log(index);
+        console.log(value);
+      });
+    </script>
+  </body>
+</html>
