@@ -46,14 +46,11 @@ function renderTodoList() {
     ">Delete</button></p>`;
     */
 
-    //After Css
+    //After Css & adding event listener
     const html = `
     <div>${name}</div>
     <div>${dueDate}</div>
-    <button onclick="
-    todoList.splice(${i}, 1);
-    renderTodoList();
-    " class="delete-btn">Delete</button>`;
+    <button class="delete-btn js-delete-btn">Delete</button>`;
 
     todoListHTML = todoListHTML + html;
   }
@@ -72,6 +69,14 @@ function renderTodoList() {
   // console.log(todoListHTML);
 
   document.querySelector(".js-todo-list").innerHTML = todoListHTML;
+
+  //delete todo list using event listener
+  document.querySelectorAll(".js-delete-btn").forEach((deleteButton, index) => {
+    deleteButton.addEventListener("click", () => {
+      todoList.splice(index, 1);
+      renderTodoList();
+    });
+  });
 }
 
 function addTodo() {

@@ -6,7 +6,55 @@
     <title>Advanced Functions</title>
   </head>
   <body>
+    <button onclick="" class="js-button">Click</button>
+
     <script>
+      //Filter array similar to forEach loop
+      //It creates new array and filter the old array and put it in new array
+      [1, -3, 5].filter((value, index) => {
+        /*
+        if (value >= 0) {
+          return true;
+        } else {
+          return false;
+        }
+          */
+        return value >= 0;
+      });
+
+      //map is similar to filter
+      console(
+        [1, 1, 3].map((value, index) => {
+          return value * 2;
+        })
+      );
+
+      //shortcut arrow function
+      console([1, 1, 3].map((value) => value * 2));
+
+      /*
+      const buttonElement = document.querySelector(".js-button");
+
+      //adding event listener instead of calling fun in onclick
+      buttonElement.addEventListener("click", () => {
+        console.log("click");
+      });
+
+      //if we want to remove an event Listner then we have store the arrow fun in variable
+      const eventListener = () => {
+        console.log("click2");
+      };
+
+      buttonElement.addEventListener("click", eventListener());
+
+      buttonElement.removeEventListener("click", eventListener());
+
+      buttonElement.addEventListener("click", () => {
+        console.log("click3");
+      });
+
+      */
+
       /*
       //functions are also value
       const function1 = function greeting() {
@@ -59,6 +107,7 @@
 
       */
 
+      /*
       ["make dinner", "wash dishes", "watch youtube"].forEach(function (
         value,
         index
@@ -69,6 +118,40 @@
         console.log(index);
         console.log(value);
       });
+
+      //Arrow Function
+      const arrowFunction = () => {
+        console.log("Arrow Function");
+      };
+      arrowFunction();
+
+      //When there is only a one parameter then we can remove () brackets
+      const oneParam = (param) => {
+        console.log(param + 1);
+      };
+
+      oneParam(2);
+
+      //we can also write it like this
+      //const oneLine = () => 2 + 3;
+      const oneLine = () => {
+        return 2 + 3;
+      };
+
+      console.log(oneLine());
+
+      //For Each loop with arrow function
+      ["make dinner", "wash dishes", "watch youtube"].forEach(
+        (value, index) => {
+          if (value === "wash dishes") {
+            return;
+          }
+          console.log(index);
+          console.log(value);
+        }
+      );
+
+      */
     </script>
   </body>
 </html>
