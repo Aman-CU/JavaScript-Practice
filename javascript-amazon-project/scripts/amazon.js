@@ -1,3 +1,4 @@
+import { cart } from "../data/cart.js";
 //Products created by me
 // const products = [
 //   {
