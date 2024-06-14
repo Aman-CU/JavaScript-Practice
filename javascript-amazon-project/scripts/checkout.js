@@ -5,6 +5,32 @@ import { loadCart } from "../data/cart.js";
 //import "../data/cart-class.js";
 //import "../data/backend-practice.js";
 
+//async is shortcut for promise
+async function loadPage() {
+  //loadProductsFetch().then(() => {});
+  await loadProductsFetch();
+
+  await new Promise((resolve) => {
+    loadCart(() => {
+      resolve();
+    });
+  });
+
+  renderOrderSummary();
+  renderPaymentSummary();
+}
+loadPage();
+
+/*
+function loadPage() {
+  return new Promise((resolve) => {
+    console.log("load Page");
+    resolve();
+  });
+} */
+
+/*
+
 //Promise.all() helps us to run multiple Promises at the same time and it makes more efficient.
 Promise.all([
   loadProductsFetch(),
@@ -27,6 +53,8 @@ Promise.all([
   renderOrderSummary();
   renderPaymentSummary();
 });
+
+*/
 
 /*
 new Promise((resolve) => {
