@@ -1,19 +1,20 @@
 import { renderOrderSummary } from "./checkout/orderSummary.js";
 import { renderPaymentSummary } from "./checkout/paymentSummary.js";
-import { loadProducts } from "../data/products.js";
+import { loadProducts, loadProductsFetch } from "../data/products.js";
 import { loadCart } from "../data/cart.js";
 //import "../data/cart-class.js";
 //import "../data/backend-practice.js";
 
 //Promise.all() helps us to run multiple Promises at the same time and it makes more efficient.
 Promise.all([
-  new Promise((resolve) => {
-    console.log("start promise");
-    loadProducts(() => {
-      console.log("finished loading");
-      resolve("value1");
-    });
-  }),
+  loadProductsFetch(),
+  //   new Promise((resolve) => {
+  //     console.log("start promise");
+  //     loadProducts(() => {
+  //       console.log("finished loading");
+  //       resolve("value1");
+  //     });
+  //   }),
 
   new Promise((resolve) => {
     loadCart(() => {
