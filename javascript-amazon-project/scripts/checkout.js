@@ -7,14 +7,24 @@ import { loadCart } from "../data/cart.js";
 
 //async is shortcut for promise
 async function loadPage() {
-  //loadProductsFetch().then(() => {});
-  await loadProductsFetch();
+  try {
+    //we can manually create an error using throw
+    //throw 'error1';
 
-  await new Promise((resolve) => {
-    loadCart(() => {
-      resolve();
+    //loadProductsFetch().then(() => {});
+    await loadProductsFetch();
+
+    await new Promise((resolve, reject) => {
+      // throw 'error2'
+      loadCart(() => {
+        //creating an error asynchronusally or in the future
+        //reject("error3");
+        resolve();
+      });
     });
-  });
+  } catch (error) {
+    console.log("Unexpected error. Please try again later.");
+  }
 
   renderOrderSummary();
   renderPaymentSummary();
