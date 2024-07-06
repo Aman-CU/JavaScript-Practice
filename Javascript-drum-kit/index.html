@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Drum Kit</title>
+  </head>
+  <body>
+    <div class="container">
+      <div data-key="65" class="keys">A</div>
+      <div data-key="83" class="keys">S</div>
+      <div data-key="68" class="keys">D</div>
+      <div data-key="70" class="keys">F</div>
+      <div data-key="71" class="keys">G</div>
+      <div data-key="72" class="keys">H</div>
+      <div data-key="73" class="keys">I</div>
+      <div data-key="74" class="keys">J</div>
+      <div data-key="75" class="keys">K</div>
+    </div>
+    <audio data-key="65" id="A" class="sound" src="sound/boom.wav"></audio>
+    <audio data-key="83" id="S" class="sound" src="sound/clap.wav"></audio>
+    <audio data-key="68" id="D" class="sound" src="sound/hihat.wav"></audio>
+    <audio data-key="70" id="F" class="sound" src="sound/kick.wav"></audio>
+    <audio data-key="71" id="G" class="sound" src="sound/openhat.wav"></audio>
+    <audio data-key="72" id="H" class="sound" src="sound/ride.wav"></audio>
+    <audio data-key="73" id="I" class="sound" src="sound/snare.wav"></audio>
+    <audio data-key="74" id="J" class="sound" src="sound/tink.wav"></audio>
+    <audio data-key="75" id="K" class="sound" src="sound/tom.wav"></audio>
+  </body>
+
+  <script src="main.js"></script>
+</html>
